@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom'
+
 const Footer = () => {
     return ( 
         <footer>
-            <small>Made by <a href="./">me!</a></small>
+            <small>Made by <Link href="./">me!</Link></small>
         </footer>
     );
 }
