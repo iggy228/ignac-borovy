@@ -16,6 +16,7 @@ main {
 
 h1, h2, h3, h4, h5, h6, p, small {
   color: white;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,6 +34,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 16px 0;
 }
 
 nav h1 {
@@ -64,4 +66,8 @@ footer {
   display: flex;
   justify-content: flex-end;
   padding-bottom: 16px;
+}
+
+main h2 {
+  margin: 0 0 32px;
 }

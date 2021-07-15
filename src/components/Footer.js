@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
-    return ( 
+    return (
         <footer>
-            <small>Made by <Link href="./">me!</Link></small>
+            <small>Made by <Link to="./">me!</Link></small>
         </footer>
     );
 }
- 
+
 export default Footer;
