@@ -7,6 +7,7 @@ const useStyle = makeStyles({
     },
     link: {
         padding: 12,
+        color: 'white',
     },
 })
 

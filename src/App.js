@@ -1,5 +1,4 @@
 import Navbar from './components/Navbar'
-import Footer from './components/Footer'
 
 import Aboat from './pages/Aboat'
 
@@ -21,7 +20,6 @@ function App() {
               <Aboat />
             </Route>
           </Switch>
-        <Footer />
       </div>
     </Router>
   );

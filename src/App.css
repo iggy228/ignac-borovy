@@ -4,31 +4,6 @@
   flex-direction: column;
 }
 
-main {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-}
-
-h1, h2, h3, h4, h5, h6, p, small {
-  color: white;
-  margin: 0;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nunito', sans-serif;
-}
-
-a {
-  color: white !important;
-}
-
-footer {
-  display: flex;
-  justify-content: flex-end;
-  padding-bottom: 16px;
-}
-
-main h2 {
-  margin: 0 0 32px;
 }
