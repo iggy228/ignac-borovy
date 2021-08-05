@@ -1,4 +1,5 @@
 import { Typography, AppBar, Toolbar, Link, makeStyles } from '@material-ui/core';
+import { Link as RouterLink } from 'react-router-dom'
 
 const useStyle = makeStyles({
     title: {
@@ -18,9 +19,9 @@ const Navbar = () => {
                 <Typography variant="h5" className={classes.title}>
                     Ignác Borový
                 </Typography>
-                <Link className={classes.link}>Home</Link>
-                <Link className={classes.link}>Portfolio</Link>
-                <Link className={classes.link}>Contact</Link>
+                <Link component={RouterLink} className={classes.link} to="/">Aboat</Link>
+                <Link component={RouterLink} className={classes.link} to="/portfolio">Portfolio</Link>
+                <Link component={RouterLink} className={classes.link} to="/contact">Contact</Link>
             </Toolbar>
         </AppBar>
     );
