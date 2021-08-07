@@ -1,8 +1,9 @@
-import { Avatar, Container, makeStyles, Typography } from '@material-ui/core';
+import { Avatar, Container, makeStyles, Typography, Link } from '@material-ui/core';
 import AvatarImage from '../img/profile-pic.jpg';
 
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const windowWidth = window.screen.width;
 
@@ -27,14 +28,18 @@ const useStyle = makeStyles({
         flexDirection: 'row',
         justifyContent: 'center',
     },
+    avatarLink: {
+        margin: 8,
+    },
     pink: {
         background: 'purple',
-        margin: 8,
     },
     blue: {
         background: 'blue',
-        margin: 8,
     },
+    black: {
+        background: 'black',
+    }
 })
 
 const Home = () => {
@@ -57,12 +62,21 @@ const Home = () => {
                     alt="Ignac Borovy" 
                     src={AvatarImage} />
                 <div className={classes.socialMediaRow}>
-                    <Avatar className={classes.pink}>
-                        <InstagramIcon />
-                    </Avatar>
-                    <Avatar className={classes.blue}>
-                        <FacebookIcon />
-                    </Avatar>
+                    <Link className={classes.avatarLink} href="https://www.instagram.com/iggy_borovy">
+                        <Avatar className={classes.pink}>
+                            <InstagramIcon />
+                        </Avatar>
+                    </Link>
+                    <Link className={classes.avatarLink} href="https://www.facebook.com/ignac.borovy">
+                        <Avatar className={classes.blue}>
+                            <FacebookIcon />
+                        </Avatar>
+                    </Link>
+                    <Link className={classes.avatarLink} href="https://www.github.com/iggy228">
+                        <Avatar className={classes.black}>
+                            <GitHubIcon />
+                        </Avatar>
+                    </Link>
                 </div>
             </div>
         </Container>
