@@ -1,6 +1,7 @@
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
 
-import Aboat from './pages/Aboat'
+import Aboat from './pages/Aboat';
+import MyProjects from './pages/MyProjects';
 
 import {
   BrowserRouter as Router,
@@ -16,6 +17,9 @@ function App() {
       <div className="App">
         <Navbar />
           <Switch>
+          <Route path='/projects'>
+              <MyProjects />
+            </Route>
             <Route path='/'>
               <Aboat />
             </Route>

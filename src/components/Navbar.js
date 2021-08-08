@@ -21,7 +21,7 @@ const Navbar = () => {
                     Ignác Borový
                 </Typography>
                 <Link component={RouterLink} className={classes.link} to="/">Aboat</Link>
-                <Link component={RouterLink} className={classes.link} to="/portfolio">Portfolio</Link>
+                <Link component={RouterLink} className={classes.link} to="/projects">My projects</Link>
                 <Link component={RouterLink} className={classes.link} to="/contact">Contact</Link>
             </Toolbar>
         </AppBar>
