@@ -8,6 +8,7 @@ body {
   height: 100vh;
   margin: 0;
   background-image: url('img/background.jpg');
+  background-size: cover;
   overflow-x: hidden;
 }
 

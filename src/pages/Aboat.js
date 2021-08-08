@@ -7,17 +7,33 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const windowWidth = window.screen.width;
 
-const useStyle = makeStyles({
+const useStyle = makeStyles(theme => ({
     about: {
         display: 'flex',
-        flexDirection: 'row',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+        },
+        [theme.breakpoints.up('md')]: {
+            flexDirection: 'row',
+        },
         paddingTop: 32,
     },
     mainContent: {
         flexGrow: 1,
         marginRight: 32,
+        color: 'white',
+    },
+    sideContent: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: 64,
+        },
     },
     avatar: {
+        display: 'flex',
+        alignSelf: 'center',
         width: windowWidth / 4,
         height: windowWidth / 4,
         border: "1px solid black",
@@ -40,7 +56,7 @@ const useStyle = makeStyles({
     black: {
         background: 'black',
     }
-})
+}))
 
 const Home = () => {
     const classes = useStyle();
@@ -56,7 +72,7 @@ const Home = () => {
                     Web app I'm doing in React.js with using UI framework as Material UI or using libraries as Tailwind.
                 </Typography>
             </div>
-            <div>
+            <div className={classes.sideContent}>
                 <Avatar 
                     className={classes.avatar} 
                     alt="Ignac Borovy" 
