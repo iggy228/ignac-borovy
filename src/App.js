@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 
 import Aboat from './pages/Aboat';
 import MyProjects from './pages/MyProjects';
+import Contact from './pages/Contact';
 
 import {
   BrowserRouter as Router,
@@ -17,8 +18,11 @@ function App() {
       <div className="App">
         <Navbar />
           <Switch>
-          <Route path='/projects'>
+            <Route path='/projects'>
               <MyProjects />
+            </Route>
+            <Route path='/contact'>
+              <Contact />
             </Route>
             <Route path='/'>
               <Aboat />
