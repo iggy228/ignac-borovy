@@ -1,6 +1,7 @@
 import { TextField, makeStyles, Button } from "@material-ui/core"
 import { useState } from "react";
 import ContactFormField from "../components/ContactTextField";
+import emailjs from 'emailjs-com';
 
 const useStyle = makeStyles({
     main: {
@@ -38,8 +39,29 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [description, setDescription] = useState('');
 
-    const submitForm = () => {
-        console.log(firstname + '' + lastname);
+    const submitForm = async () => {
+        try {
+            let name = firstname + ' ' + lastname;
+            const templateParams = {
+                name,
+                email,
+                description
+            };
+
+            await emailjs.send(
+                process.env.REACT_APP_SERVICE_ID,
+                process.env.REACT_APP_TEMPLATE_ID,
+                templateParams,
+                process.env.REACT_APP_USER_ID,
+            ).then(() => {
+                setFirstname('');
+                setLastname('');
+                setEmail('');
+                setDescription('');
+            });
+        } catch (e) {
+            console.log(e);
+        }
     }
 
     return (
